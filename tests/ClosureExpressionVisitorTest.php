@@ -57,6 +57,7 @@ class ClosureExpressionVisitorTest extends TestCase
         self::assertSame(42, $this->visitor->getObjectFieldValue($object, 'foo.fooBar'));
     }
 
+    #[RequiresPhp('>= 8.4.0')]
     public function testGetObjectFieldValueAccessingRawValueBypassingPropertyHook(): void
     {
         $object         = new TestObjectPropertyHook();

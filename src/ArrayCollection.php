@@ -321,6 +321,7 @@ class ArrayCollection implements Collection, Selectable, Stringable
      */
     public function add(mixed $element)
     {
+        // @phpstan-ignore assign.propertyType (see method comment)
         $this->elements[] = $element;
     }
 
